@@ -1,10 +1,14 @@
 let counter = {};
-$('.cats').click(function(e) {
+$('.cats a').click(function(e) {
+    e.preventDefault();
     let cat_id = this.id;
+    console.log(cat_id);
     if (!(cat_id in counter)) {
         counter[cat_id] = 0;
     }
     counter[cat_id] += 1;
     console.log(counter);
-    $(this).children(".cat_clicker").html(counter[cat_id]);
+    $(".cat_label").html(cat_id);
+    $(".cat_pict").html($("<img>").attr("src", this.href));
+    $(".cat_clicker").html("number of clicks: " + counter[cat_id]);
 });

@@ -3,19 +3,40 @@
     <head>
         <meta charset="UTF-8">
         <title>Cat clicker</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=EB Garamond' rel='stylesheet'>
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <div id="cat1" class="cats">
-            <div class="cat_label">mimimi</div>
-            <img class="cat_image" src="images/mimimi.jpg" width="500">
-            <div class="cat_clicker">0</div>
-        </div>
-        <div id="cat2" class="cats">
-            <div class="cat_label">snow hater</div>
-            <img class="cat_image" src="images/snow_hater.jpg" width="500">
-            <div class="thanks">Thanks to <a href="https://imgur.com/gallery/yla2O">Zengheng</a> for the photo.</div>
-            <div class="cat_clicker">0</div>            
+        <div class="container">
+            <!-- header grid -->
+            <div class="header">
+                <h1 id="title">Cat clicker</h1>
+            </div>
+            <!-- main grid -->
+            <div class="main">
+                <div class="cat_label">mimimi</div>
+                <div class="cat_pict">Here can be your cat :)</div>
+                <div class="cat_clicker">number of clicks: 0</div>
+            </div>
+            <!-- sidebar grid -->
+            <div class="sidebar">
+                <!-- list of cats -->
+                <div id="cats_list">
+                    <div id="cat1" class="cats">
+                        <a id="mimimi" href="images/mimimi.jpg">mimimi</a>
+                    </div>
+                    <div id="cat2" class="cats">
+                        <a id="snow_hater" href="images/snow_hater.jpg">snow hater</a>
+                        <div class="thanks">Thanks to <a href="https://imgur.com/gallery/yla2O">Zengheng</a> for the photo.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer grid -->
+            <div class="footer">
+                Designed and Created by Taisia Simakova 2018
+            </div>
         </div>
     </body>
     <script src="js/counter_clicker.js"></script>

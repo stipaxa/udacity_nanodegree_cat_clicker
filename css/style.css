@@ -1,11 +1,110 @@
+.container {
+    display: grid;
+    width: 100%;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 250px;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas: 
+    "header header"
+    "main sidebar"
+    "footer footer";
+}
+
+.box {
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 150%;
+}
+
+/*
+* Header
+*/
+.header {
+    grid-area: header;
+    /* background-color: chartreuse; */
+}
+
+/*
+* Sidebars
+*/
+.sidebar {
+    grid-area: sidebar;
+    /* background-color: aqua; */
+}
+
+/*
+* Main
+*/
+.main {
+    grid-area: main;
+    /* background-color: blueviolet; */
+    display: grid;
+    grid-gap: 5px;
+    grid-template-rows: 30px 1fr 30px;
+    grid-template-areas:
+    "cat_label" 
+    "cat_pict" 
+    "cat_clicker";
+    justify-content: center;
+}
+
+/*
+* Footer
+*/
+.footer {
+    grid-area: footer;
+    /* background-color: aquamarine; */
+}
+
+.cat_pict img {
+    width: 500px;
+}
+
+.cat_label {
+    /* background-color: brown; */
+}
+
+.cat_pict {
+    /* background-color: coral; */
+}
+
+.cat_clicker {
+    /* background-color: cornflowerblue; */
+}
+
 body {
     width: 100%;
 }
+
 .cats {
-    display: inline-block;
-    width: 500;
+    /* background-color: crimson; */
 }
 
-.cat_image {
-    width: 500;
+body {
+    text-align: center;
+    font-family: 'Berkshire Swash', cursive; 
+
+    font-size: 22px;
+    background-color: #b2ebe6;
+    /* margin: 0 20px 20px 20px; */
+}
+
+#title {
+    color: #1c1c7a;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#cat_list {
+    text-align: left;
+}
+
+.thanks {
+    font-size: 14px;
+}
+
+.cat_pict {
+    font-size: 60px;
+    border: 2px solid black;
 }
